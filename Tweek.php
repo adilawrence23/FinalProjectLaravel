@@ -6,7 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tweek extends Model
 {
-    protected $guarded =[];
+    use Likable;
+
+    protected $guarded = [];
+
     public function user()
     {
         return $this->belongsTo(User::class);
